@@ -1,0 +1,51 @@
+[0.399s] Invoking command in '/home/bhargav/ee_cs_265A_ws/src/f1tenth_system/f1tenth_stack': PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/f1tenth_stack build --build-base /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build install --record /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/install.log --install-scripts $base/lib/f1tenth_stack --single-version-externally-managed install_data
+[0.501s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.501s]   warnings.warn(
+[0.505s] running egg_info
+[0.505s] creating ../../../build/f1tenth_stack/f1tenth_stack.egg-info
+[0.505s] writing ../../../build/f1tenth_stack/f1tenth_stack.egg-info/PKG-INFO
+[0.505s] writing dependency_links to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/dependency_links.txt
+[0.505s] writing entry points to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/entry_points.txt
+[0.505s] writing requirements to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/requires.txt
+[0.505s] writing top-level names to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/top_level.txt
+[0.505s] writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'
+[0.508s] reading manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'
+[0.508s] writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'
+[0.508s] running build
+[0.508s] running build_py
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[0.508s] copying f1tenth_stack/throttle_interpolator.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[0.508s] copying f1tenth_stack/__init__.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[0.508s] copying f1tenth_stack/tf_publisher.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack
+[0.508s] running install
+[0.508s] running install_lib
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[0.508s] copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_interpolator.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[0.508s] copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack/__init__.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[0.508s] copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack/tf_publisher.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack
+[0.508s] byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_interpolator.py to throttle_interpolator.cpython-310.pyc
+[0.509s] byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/__init__.py to __init__.cpython-310.pyc
+[0.509s] byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/tf_publisher.py to tf_publisher.cpython-310.pyc
+[0.509s] running install_data
+[0.509s] creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/ament_index
+[0.509s] creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/ament_index/resource_index
+[0.509s] creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/ament_index/resource_index/packages
+[0.509s] copying resource/f1tenth_stack -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/ament_index/resource_index/packages
+[0.509s] copying package.xml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack
+[0.509s] creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/launch
+[0.509s] copying launch/bringup_launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/launch
+[0.509s] creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[0.509s] copying config/vesc.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[0.509s] copying config/f1tenth_online_async.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[0.509s] copying config/mux.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[0.509s] copying config/sensors.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[0.509s] copying config/joy_teleop.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config
+[0.509s] running install_egg_info
+[0.510s] Copying ../../../build/f1tenth_stack/f1tenth_stack.egg-info to /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack-0.0.1-py3.10.egg-info
+[0.510s] running install_scripts
+[0.520s] Installing tf_publisher script to /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/f1tenth_stack
+[0.520s] Installing throttle_interpolator script to /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/f1tenth_stack
+[0.520s] writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/install.log'
+[0.536s] Invoked command in '/home/bhargav/ee_cs_265A_ws/src/f1tenth_system/f1tenth_stack' returned '0': PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/f1tenth_stack build --build-base /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build install --record /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/install.log --install-scripts $base/lib/f1tenth_stack --single-version-externally-managed install_data

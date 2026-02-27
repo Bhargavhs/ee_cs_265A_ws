@@ -1,0 +1,55 @@
+[0.000000] (-) TimerEvent: {}
+[0.000163] (-) JobUnselected: {'identifier': 'console'}
+[0.000177] (-) JobUnselected: {'identifier': 'ee_cs_265a'}
+[0.000185] (-) JobUnselected: {'identifier': 'f1tenth_gym_ros'}
+[0.000191] (-) JobUnselected: {'identifier': 'f1tenth_stack'}
+[0.000197] (-) JobUnselected: {'identifier': 'hector_compressed_map_transport'}
+[0.000202] (-) JobUnselected: {'identifier': 'hector_geotiff'}
+[0.000226] (-) JobUnselected: {'identifier': 'hector_geotiff_plugins'}
+[0.000241] (-) JobUnselected: {'identifier': 'hector_imu_attitude_to_tf'}
+[0.000248] (-) JobUnselected: {'identifier': 'hector_imu_tools'}
+[0.000253] (-) JobUnselected: {'identifier': 'hector_map_server'}
+[0.000258] (-) JobUnselected: {'identifier': 'hector_map_tools'}
+[0.000263] (-) JobUnselected: {'identifier': 'hector_mapping'}
+[0.000268] (-) JobUnselected: {'identifier': 'hector_marker_drawing'}
+[0.000272] (-) JobUnselected: {'identifier': 'hector_nav_msgs'}
+[0.000277] (-) JobUnselected: {'identifier': 'hector_slam'}
+[0.000282] (-) JobUnselected: {'identifier': 'hector_slam_launch'}
+[0.000287] (-) JobUnselected: {'identifier': 'hector_trajectory_server'}
+[0.000291] (-) JobUnselected: {'identifier': 'platform'}
+[0.000296] (-) JobUnselected: {'identifier': 'racecar_control'}
+[0.000301] (-) JobUnselected: {'identifier': 'racecar_description'}
+[0.000306] (-) JobUnselected: {'identifier': 'racecar_gazebo'}
+[0.000311] (-) JobUnselected: {'identifier': 'simulator'}
+[0.000315] (-) JobUnselected: {'identifier': 'vesc'}
+[0.000320] (-) JobUnselected: {'identifier': 'vesc_ackermann'}
+[0.000325] (-) JobUnselected: {'identifier': 'vesc_driver'}
+[0.000330] (-) JobUnselected: {'identifier': 'vesc_msgs'}
+[0.000336] (f1tenth_gazebo) JobQueued: {'identifier': 'f1tenth_gazebo', 'dependencies': OrderedDict()}
+[0.000343] (f1tenth_gazebo) JobStarted: {'identifier': 'f1tenth_gazebo'}
+[0.102364] (-) TimerEvent: {}
+[0.202689] (-) TimerEvent: {}
+[0.262904] (f1tenth_gazebo) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/f1tenth_gazebo', 'build', '--build-base', '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build', 'install', '--record', '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/bhargav/ee_cs_265A_ws/src/f1tenth_gazebo', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'CONDA_PROMPT_MODIFIER': '(base)', 'USER': 'bhargav', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/bhargav', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/bhargav/ee_cs_265A_ws', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/bhargav/.nvm/versions/node/v20.20.0/bin', 'NVM_INC': '/home/bhargav/.nvm/versions/node/v20.20.0/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2766', 'SYSTEMD_EXEC_PID': '3193', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', '_CONDA_ROOT': '/home/bhargav/miniconda3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '15274', 'NVM_DIR': '/home/bhargav/.nvm', 'COLCON_PREFIX_PATH': '/home/bhargav/ee_cs_265A_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'bhargav', 'JOURNAL_STREAM': '8:19744', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'bhargav', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/bhargav/miniconda3/bin:/home/bhargav/miniconda3/condabin:/home/bhargav/.nvm/versions/node/v20.20.0/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/bhargav:@/tmp/.ICE-unix/3170,unix/bhargav:/tmp/.ICE-unix/3170', 'INVOCATION_ID': '5eab779923da4642a00b2c180ecd8380', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '89', 'AMENT_PREFIX_PATH': '/home/bhargav/ee_cs_265A_ws/install/f1tenth_stack:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a:/opt/ros/humble', 'CONDA_PYTHON_EXE': '/home/bhargav/miniconda3/bin/python', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:8a87bbc7-97a1-4e15-a845-996e2162118f', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'CONDA_DEFAULT_ENV': 'base', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', '_CONDA_EXE': '/home/bhargav/miniconda3/bin/conda', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/bhargav/miniconda3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages:/home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages:/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'CONDA_PREFIX': '/home/bhargav/miniconda3', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.302774] (-) TimerEvent: {}
+[0.362165] (f1tenth_gazebo) StdoutLine: {'line': b'running egg_info\n'}
+[0.362334] (f1tenth_gazebo) StdoutLine: {'line': b'writing ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/PKG-INFO\n'}
+[0.362370] (f1tenth_gazebo) StdoutLine: {'line': b'writing dependency_links to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/dependency_links.txt\n'}
+[0.362404] (f1tenth_gazebo) StdoutLine: {'line': b'writing entry points to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/entry_points.txt\n'}
+[0.362426] (f1tenth_gazebo) StdoutLine: {'line': b'writing requirements to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/requires.txt\n'}
+[0.362446] (f1tenth_gazebo) StdoutLine: {'line': b'writing top-level names to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/top_level.txt\n'}
+[0.363196] (f1tenth_gazebo) StdoutLine: {'line': b"reading manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'\n"}
+[0.363253] (f1tenth_gazebo) StdoutLine: {'line': b"writing manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'\n"}
+[0.363274] (f1tenth_gazebo) StdoutLine: {'line': b'running build\n'}
+[0.363293] (f1tenth_gazebo) StdoutLine: {'line': b'running build_py\n'}
+[0.363311] (f1tenth_gazebo) StdoutLine: {'line': b'running install\n'}
+[0.363331] (f1tenth_gazebo) StdoutLine: {'line': b'running install_lib\n'}
+[0.363938] (f1tenth_gazebo) StdoutLine: {'line': b'running install_data\n'}
+[0.363982] (f1tenth_gazebo) StdoutLine: {'line': b'copying worlds/track.sdf -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds\n'}
+[0.364006] (f1tenth_gazebo) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.364591] (f1tenth_gazebo) StdoutLine: {'line': b"removing '/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[0.366467] (f1tenth_gazebo) StdoutLine: {'line': b'Copying ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info to /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo-0.0.1-py3.10.egg-info\n'}
+[0.366505] (f1tenth_gazebo) StdoutLine: {'line': b'running install_scripts\n'}
+[0.375693] (f1tenth_gazebo) StdoutLine: {'line': b"writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/install.log'\n"}
+[0.388664] (f1tenth_gazebo) CommandEnded: {'returncode': 0}
+[0.391980] (f1tenth_gazebo) JobEnded: {'identifier': 'f1tenth_gazebo', 'rc': 0}
+[0.392414] (-) EventReactorShutdown: {}

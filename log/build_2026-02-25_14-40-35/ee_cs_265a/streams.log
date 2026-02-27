@@ -1,0 +1,33 @@
+[0.401s] Invoking command in '/home/bhargav/ee_cs_265A_ws/src/ee_cs_265a': PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ee_cs_265a build --build-base /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build install --record /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log --single-version-externally-managed install_data
+[0.506s] running egg_info
+[0.506s] creating ../../build/ee_cs_265a/ee_cs_265a.egg-info
+[0.507s] writing ../../build/ee_cs_265a/ee_cs_265a.egg-info/PKG-INFO
+[0.507s] writing dependency_links to ../../build/ee_cs_265a/ee_cs_265a.egg-info/dependency_links.txt
+[0.507s] writing entry points to ../../build/ee_cs_265a/ee_cs_265a.egg-info/entry_points.txt
+[0.507s] writing requirements to ../../build/ee_cs_265a/ee_cs_265a.egg-info/requires.txt
+[0.507s] writing top-level names to ../../build/ee_cs_265a/ee_cs_265a.egg-info/top_level.txt
+[0.507s] writing manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'
+[0.507s] reading manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'
+[0.508s] writing manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'
+[0.508s] running build
+[0.508s] running build_py
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a
+[0.508s] copying ee_cs_265a/__init__.py -> /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a
+[0.508s] running install
+[0.508s] running install_lib
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a
+[0.508s] copying /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a/__init__.py -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a
+[0.508s] byte-compiling /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__init__.py to __init__.cpython-310.pyc
+[0.508s] running install_data
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index/resource_index
+[0.508s] creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index/resource_index/packages
+[0.508s] copying resource/ee_cs_265a -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index/resource_index/packages
+[0.509s] copying package.xml -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a
+[0.509s] running install_egg_info
+[0.509s] Copying ../../build/ee_cs_265a/ee_cs_265a.egg-info to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info
+[0.510s] running install_scripts
+[0.520s] writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log'
+[0.532s] Invoked command in '/home/bhargav/ee_cs_265A_ws/src/ee_cs_265a' returned '0': PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ee_cs_265a build --build-base /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build install --record /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log --single-version-externally-managed install_data

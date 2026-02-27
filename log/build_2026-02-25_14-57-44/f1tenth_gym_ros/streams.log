@@ -1,0 +1,42 @@
+[0.260s] Invoking command in '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros': CONDA_PROMPT_MODIFIER=(f1tenth) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build
+[0.371s] running develop
+[0.442s] Removing /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth-gym-ros.egg-link (link to .)
+[0.453s] Invoked command in '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros' returned '0': CONDA_PROMPT_MODIFIER=(f1tenth) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build
+[0.453s] Invoking command in '/home/bhargav/ee_cs_265A_ws/src/f1tenth_gym_ros': CONDA_PROMPT_MODIFIER=(f1tenth) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f1tenth_gym_ros build --build-base /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build install --record /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/install.log --single-version-externally-managed install_data --force
+[0.551s] running egg_info
+[0.551s] writing ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/PKG-INFO
+[0.551s] writing dependency_links to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/dependency_links.txt
+[0.551s] writing entry points to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/entry_points.txt
+[0.551s] writing requirements to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/requires.txt
+[0.551s] writing top-level names to ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/top_level.txt
+[0.551s] reading manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+[0.551s] adding license file 'LICENSE'
+[0.551s] writing manifest file '../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info/SOURCES.txt'
+[0.551s] running build
+[0.551s] running build_py
+[0.551s] creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build
+[0.551s] creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build/lib
+[0.551s] creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[0.551s] copying f1tenth_gym_ros/gym_bridge.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[0.551s] copying f1tenth_gym_ros/__init__.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros
+[0.551s] running install
+[0.551s] running install_lib
+[0.552s] creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
+[0.552s] copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/gym_bridge.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
+[0.552s] copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build/lib/f1tenth_gym_ros/__init__.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros
+[0.552s] byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/gym_bridge.py to gym_bridge.cpython-310.pyc
+[0.554s] byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/__init__.py to __init__.cpython-310.pyc
+[0.554s] running install_data
+[0.554s] copying resource/f1tenth_gym_ros -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/share/ament_index/resource_index/packages
+[0.554s] copying package.xml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros
+[0.554s] copying launch/gym_bridge_launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[0.554s] copying launch/ego_racecar.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[0.554s] copying launch/opp_racecar.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[0.554s] copying launch/gym_bridge.rviz -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/launch
+[0.554s] copying config/sim.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/share/f1tenth_gym_ros/config
+[0.554s] running install_egg_info
+[0.554s] Copying ../../build/f1tenth_gym_ros/f1tenth_gym_ros.egg-info to /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros-0.0.0-py3.10.egg-info
+[0.554s] running install_scripts
+[0.563s] Installing gym_bridge script to /home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/f1tenth_gym_ros
+[0.563s] writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/install.log'
+[0.574s] Invoked command in '/home/bhargav/ee_cs_265A_ws/src/f1tenth_gym_ros' returned '0': CONDA_PROMPT_MODIFIER=(f1tenth) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f1tenth_gym_ros build --build-base /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/build install --record /home/bhargav/ee_cs_265A_ws/build/f1tenth_gym_ros/install.log --single-version-externally-managed install_data --force

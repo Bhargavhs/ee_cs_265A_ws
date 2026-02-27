@@ -1,0 +1,21 @@
+[0.277s] Invoking command in '/home/bhargav/ee_cs_265A_ws/src/f1tenth_gazebo': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f1tenth_gazebo build --build-base /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build install --record /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/install.log --single-version-externally-managed install_data
+[0.378s] running egg_info
+[0.379s] writing ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/PKG-INFO
+[0.379s] writing dependency_links to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/dependency_links.txt
+[0.379s] writing entry points to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/entry_points.txt
+[0.379s] writing requirements to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/requires.txt
+[0.379s] writing top-level names to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/top_level.txt
+[0.380s] reading manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'
+[0.380s] writing manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'
+[0.380s] running build
+[0.380s] running build_py
+[0.380s] running install
+[0.380s] running install_lib
+[0.381s] running install_data
+[0.381s] copying worlds/track.sdf -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds
+[0.381s] running install_egg_info
+[0.381s] removing '/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo-0.0.1-py3.10.egg-info' (and everything under it)
+[0.382s] Copying ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info to /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo-0.0.1-py3.10.egg-info
+[0.383s] running install_scripts
+[0.392s] writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/install.log'
+[0.403s] Invoked command in '/home/bhargav/ee_cs_265A_ws/src/f1tenth_gazebo' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/f1tenth_gazebo build --build-base /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build install --record /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/install.log --single-version-externally-managed install_data

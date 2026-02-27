@@ -1,0 +1,5 @@
+  File "/home/bhargav/ee_cs_265A_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages/f1tenth_gym_ros/gym_bridge.py", line 77
+    self.env = gym.make('f110_gym:f110-v0', disable_env_checker=True, disable_env_checker=True,
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: disable_env_checker
+

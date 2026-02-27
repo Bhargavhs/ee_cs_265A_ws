@@ -1,0 +1,46 @@
+running egg_info
+creating ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info
+writing ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/PKG-INFO
+writing dependency_links to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/dependency_links.txt
+writing entry points to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/entry_points.txt
+writing requirements to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/requires.txt
+writing top-level names to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/top_level.txt
+writing manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'
+reading manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'
+writing manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build
+creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build/lib
+creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build/lib/f1tenth_gazebo
+copying f1tenth_gazebo/__init__.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build/lib/f1tenth_gazebo
+running install
+running install_lib
+creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo
+copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build/lib/f1tenth_gazebo/__init__.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo
+byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/ament_index
+creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/ament_index/resource_index
+creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/ament_index/resource_index/packages
+copying resource/f1tenth_gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/ament_index/resource_index/packages
+copying package.xml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo
+creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/launch
+copying launch/f1tenth_gazebo.launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/launch
+creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds
+copying worlds/demo_track.world -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds
+creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+copying urdf/materials.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+copying urdf/macros.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+copying urdf/racecar.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+copying urdf/racecar.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+copying meshes/hinge.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+copying meshes/chassis.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+copying meshes/right_wheel.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+copying meshes/left_wheel.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+copying meshes/hokuyo.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+running install_egg_info
+Copying ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info to /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo-0.0.1-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/install.log'

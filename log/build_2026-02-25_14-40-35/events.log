@@ -1,0 +1,97 @@
+[0.000000] (-) TimerEvent: {}
+[0.000073] (ee_cs_265a) JobQueued: {'identifier': 'ee_cs_265a', 'dependencies': OrderedDict()}
+[0.000106] (f1tenth_stack) JobQueued: {'identifier': 'f1tenth_stack', 'dependencies': OrderedDict()}
+[0.000117] (ee_cs_265a) JobStarted: {'identifier': 'ee_cs_265a'}
+[0.004555] (f1tenth_stack) JobStarted: {'identifier': 'f1tenth_stack'}
+[0.099785] (-) TimerEvent: {}
+[0.200637] (-) TimerEvent: {}
+[0.300959] (-) TimerEvent: {}
+[0.399894] (ee_cs_265a) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ee_cs_265a', 'build', '--build-base', '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build', 'install', '--record', '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/bhargav/ee_cs_265A_ws/src/ee_cs_265a', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'bhargav', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/bhargav', 'OLDPWD': '/home/bhargav/ee_cs_265A_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/bhargav/.nvm/versions/node/v20.20.0/bin', 'NVM_INC': '/home/bhargav/.nvm/versions/node/v20.20.0/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2790', 'SYSTEMD_EXEC_PID': '3213', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3770', 'NVM_DIR': '/home/bhargav/.nvm', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'bhargav', 'JOURNAL_STREAM': '8:37586', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'bhargav', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/bhargav/.nvm/versions/node/v20.20.0/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/bhargav:@/tmp/.ICE-unix/3190,unix/bhargav:/tmp/.ICE-unix/3190', 'INVOCATION_ID': '631bd961246d4950869a988de34654b3', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '89', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:963e33f6-19ee-493e-9700-002a8cb872e2', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.401506] (-) TimerEvent: {}
+[0.402664] (f1tenth_stack) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/f1tenth_stack', 'build', '--build-base', '/home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build', 'install', '--record', '/home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/install.log', '--install-scripts', '$base/lib/f1tenth_stack', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/bhargav/ee_cs_265A_ws/src/f1tenth_system/f1tenth_stack', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'USER': 'bhargav', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/bhargav', 'OLDPWD': '/home/bhargav/ee_cs_265A_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/bhargav/.nvm/versions/node/v20.20.0/bin', 'NVM_INC': '/home/bhargav/.nvm/versions/node/v20.20.0/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2790', 'SYSTEMD_EXEC_PID': '3213', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3770', 'NVM_DIR': '/home/bhargav/.nvm', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'bhargav', 'JOURNAL_STREAM': '8:37586', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'bhargav', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/bhargav/.nvm/versions/node/v20.20.0/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/bhargav:@/tmp/.ICE-unix/3190,unix/bhargav:/tmp/.ICE-unix/3190', 'INVOCATION_ID': '631bd961246d4950869a988de34654b3', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '89', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:963e33f6-19ee-493e-9700-002a8cb872e2', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/bhargav/ee_cs_265A_ws/build/f1tenth_stack', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.501703] (-) TimerEvent: {}
+[0.505768] (f1tenth_stack) StderrLine: {'line': b"/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[0.505873] (f1tenth_stack) StderrLine: {'line': b'  warnings.warn(\n'}
+[0.506145] (ee_cs_265a) StdoutLine: {'line': b'running egg_info\n'}
+[0.506557] (ee_cs_265a) StdoutLine: {'line': b'creating ../../build/ee_cs_265a/ee_cs_265a.egg-info\n'}
+[0.506614] (ee_cs_265a) StdoutLine: {'line': b'writing ../../build/ee_cs_265a/ee_cs_265a.egg-info/PKG-INFO\n'}
+[0.506639] (ee_cs_265a) StdoutLine: {'line': b'writing dependency_links to ../../build/ee_cs_265a/ee_cs_265a.egg-info/dependency_links.txt\n'}
+[0.506665] (ee_cs_265a) StdoutLine: {'line': b'writing entry points to ../../build/ee_cs_265a/ee_cs_265a.egg-info/entry_points.txt\n'}
+[0.506685] (ee_cs_265a) StdoutLine: {'line': b'writing requirements to ../../build/ee_cs_265a/ee_cs_265a.egg-info/requires.txt\n'}
+[0.506701] (ee_cs_265a) StdoutLine: {'line': b'writing top-level names to ../../build/ee_cs_265a/ee_cs_265a.egg-info/top_level.txt\n'}
+[0.506717] (ee_cs_265a) StdoutLine: {'line': b"writing manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'\n"}
+[0.507270] (ee_cs_265a) StdoutLine: {'line': b"reading manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'\n"}
+[0.507574] (ee_cs_265a) StdoutLine: {'line': b"writing manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'\n"}
+[0.507645] (ee_cs_265a) StdoutLine: {'line': b'running build\n'}
+[0.507677] (ee_cs_265a) StdoutLine: {'line': b'running build_py\n'}
+[0.507712] (ee_cs_265a) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build\n'}
+[0.507737] (ee_cs_265a) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib\n'}
+[0.507975] (ee_cs_265a) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a\n'}
+[0.508015] (ee_cs_265a) StdoutLine: {'line': b'copying ee_cs_265a/__init__.py -> /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a\n'}
+[0.508040] (ee_cs_265a) StdoutLine: {'line': b'running install\n'}
+[0.508060] (ee_cs_265a) StdoutLine: {'line': b'running install_lib\n'}
+[0.508107] (ee_cs_265a) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a\n'}
+[0.508147] (ee_cs_265a) StdoutLine: {'line': b'copying /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a/__init__.py -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a\n'}
+[0.508351] (ee_cs_265a) StdoutLine: {'line': b'byte-compiling /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__init__.py to __init__.cpython-310.pyc\n'}
+[0.508434] (ee_cs_265a) StdoutLine: {'line': b'running install_data\n'}
+[0.508475] (ee_cs_265a) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index\n'}
+[0.508513] (ee_cs_265a) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index/resource_index\n'}
+[0.508553] (ee_cs_265a) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index/resource_index/packages\n'}
+[0.508573] (ee_cs_265a) StdoutLine: {'line': b'copying resource/ee_cs_265a -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index/resource_index/packages\n'}
+[0.508610] (ee_cs_265a) StdoutLine: {'line': b'copying package.xml -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a\n'}
+[0.508646] (ee_cs_265a) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.509504] (ee_cs_265a) StdoutLine: {'line': b'Copying ../../build/ee_cs_265a/ee_cs_265a.egg-info to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info\n'}
+[0.509712] (f1tenth_stack) StdoutLine: {'line': b'running egg_info\n'}
+[0.509751] (f1tenth_stack) StdoutLine: {'line': b'creating ../../../build/f1tenth_stack/f1tenth_stack.egg-info\n'}
+[0.509773] (f1tenth_stack) StdoutLine: {'line': b'writing ../../../build/f1tenth_stack/f1tenth_stack.egg-info/PKG-INFO\n'}
+[0.509796] (f1tenth_stack) StdoutLine: {'line': b'writing dependency_links to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/dependency_links.txt\n'}
+[0.509817] (f1tenth_stack) StdoutLine: {'line': b'writing entry points to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/entry_points.txt\n'}
+[0.509864] (f1tenth_stack) StdoutLine: {'line': b'writing requirements to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/requires.txt\n'}
+[0.509885] (ee_cs_265a) StdoutLine: {'line': b'running install_scripts\n'}
+[0.509916] (f1tenth_stack) StdoutLine: {'line': b'writing top-level names to ../../../build/f1tenth_stack/f1tenth_stack.egg-info/top_level.txt\n'}
+[0.509941] (f1tenth_stack) StdoutLine: {'line': b"writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[0.512241] (f1tenth_stack) StdoutLine: {'line': b"reading manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[0.512268] (f1tenth_stack) StdoutLine: {'line': b"writing manifest file '../../../build/f1tenth_stack/f1tenth_stack.egg-info/SOURCES.txt'\n"}
+[0.512290] (f1tenth_stack) StdoutLine: {'line': b'running build\n'}
+[0.512310] (f1tenth_stack) StdoutLine: {'line': b'running build_py\n'}
+[0.512330] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build\n'}
+[0.512353] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib\n'}
+[0.512373] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[0.512393] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/throttle_interpolator.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[0.512413] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/__init__.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[0.512432] (f1tenth_stack) StdoutLine: {'line': b'copying f1tenth_stack/tf_publisher.py -> /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack\n'}
+[0.512450] (f1tenth_stack) StdoutLine: {'line': b'running install\n'}
+[0.512466] (f1tenth_stack) StdoutLine: {'line': b'running install_lib\n'}
+[0.512482] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[0.512499] (f1tenth_stack) StdoutLine: {'line': b'copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack/throttle_interpolator.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[0.512516] (f1tenth_stack) StdoutLine: {'line': b'copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack/__init__.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[0.512534] (f1tenth_stack) StdoutLine: {'line': b'copying /home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/build/lib/f1tenth_stack/tf_publisher.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack\n'}
+[0.512552] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/throttle_interpolator.py to throttle_interpolator.cpython-310.pyc\n'}
+[0.513713] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/__init__.py to __init__.cpython-310.pyc\n'}
+[0.513776] (f1tenth_stack) StdoutLine: {'line': b'byte-compiling /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack/tf_publisher.py to tf_publisher.cpython-310.pyc\n'}
+[0.513804] (f1tenth_stack) StdoutLine: {'line': b'running install_data\n'}
+[0.513826] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/ament_index\n'}
+[0.513845] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/ament_index/resource_index\n'}
+[0.513864] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/ament_index/resource_index/packages\n'}
+[0.513887] (f1tenth_stack) StdoutLine: {'line': b'copying resource/f1tenth_stack -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/ament_index/resource_index/packages\n'}
+[0.513905] (f1tenth_stack) StdoutLine: {'line': b'copying package.xml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack\n'}
+[0.513922] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/launch\n'}
+[0.513941] (f1tenth_stack) StdoutLine: {'line': b'copying launch/bringup_launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/launch\n'}
+[0.513958] (f1tenth_stack) StdoutLine: {'line': b'creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[0.513975] (f1tenth_stack) StdoutLine: {'line': b'copying config/vesc.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[0.513992] (f1tenth_stack) StdoutLine: {'line': b'copying config/f1tenth_online_async.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[0.514009] (f1tenth_stack) StdoutLine: {'line': b'copying config/mux.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[0.514025] (f1tenth_stack) StdoutLine: {'line': b'copying config/sensors.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[0.514041] (f1tenth_stack) StdoutLine: {'line': b'copying config/joy_teleop.yaml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/share/f1tenth_stack/config\n'}
+[0.514060] (f1tenth_stack) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.514493] (f1tenth_stack) StdoutLine: {'line': b'Copying ../../../build/f1tenth_stack/f1tenth_stack.egg-info to /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/python3.10/site-packages/f1tenth_stack-0.0.1-py3.10.egg-info\n'}
+[0.514519] (f1tenth_stack) StdoutLine: {'line': b'running install_scripts\n'}
+[0.520001] (ee_cs_265a) StdoutLine: {'line': b"writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log'\n"}
+[0.524328] (f1tenth_stack) StdoutLine: {'line': b'Installing tf_publisher script to /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[0.524389] (f1tenth_stack) StdoutLine: {'line': b'Installing throttle_interpolator script to /home/bhargav/ee_cs_265A_ws/install/f1tenth_stack/lib/f1tenth_stack\n'}
+[0.524414] (f1tenth_stack) StdoutLine: {'line': b"writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/f1tenth_stack/install.log'\n"}
+[0.532022] (ee_cs_265a) CommandEnded: {'returncode': 0}
+[0.538272] (ee_cs_265a) JobEnded: {'identifier': 'ee_cs_265a', 'rc': 0}
+[0.540049] (f1tenth_stack) CommandEnded: {'returncode': 0}
+[0.540792] (f1tenth_stack) JobEnded: {'identifier': 'f1tenth_stack', 'rc': 0}
+[0.541020] (-) EventReactorShutdown: {}
