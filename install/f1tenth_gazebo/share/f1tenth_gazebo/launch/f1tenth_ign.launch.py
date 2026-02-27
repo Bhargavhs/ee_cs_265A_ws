@@ -115,9 +115,13 @@ def generate_launch_description():
                 '/model/car1_red/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist',
                 '/model/car1_red/odometry@nav_msgs/msg/Odometry[ignition.msgs.Odometry',
             ],
+            remappings=[
+                ('/model/car1_red/cmd_vel', '/red/cmd_vel'),
+                ('/model/car1_red/odometry', '/red/odometry'),
+            ],
             output='screen',
         ),
-        
+
         # Bridge for BLUE car
         Node(
             package='ros_gz_bridge',
@@ -127,9 +131,13 @@ def generate_launch_description():
                 '/model/car2_blue/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist',
                 '/model/car2_blue/odometry@nav_msgs/msg/Odometry[ignition.msgs.Odometry',
             ],
+            remappings=[
+                ('/model/car2_blue/cmd_vel', '/blue/cmd_vel'),
+                ('/model/car2_blue/odometry', '/blue/odometry'),
+            ],
             output='screen',
         ),
-        
+
         # Bridge for GREEN car
         Node(
             package='ros_gz_bridge',
@@ -138,6 +146,10 @@ def generate_launch_description():
             arguments=[
                 '/model/car3_green/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist',
                 '/model/car3_green/odometry@nav_msgs/msg/Odometry[ignition.msgs.Odometry',
+            ],
+            remappings=[
+                ('/model/car3_green/cmd_vel', '/green/cmd_vel'),
+                ('/model/car3_green/odometry', '/green/odometry'),
             ],
             output='screen',
         ),
