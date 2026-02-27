@@ -1,13 +1,12 @@
-# EE/CS 265A - Autonomous Racing Workspace
+# EE/CS 265A - Final Project
 
-ROS 2 Humble workspace for F1Tenth autonomous racing with Ignition Gazebo simulation.
 
 ## Packages
 
 | Package | Description |
 |---------|-------------|
 | `f1tenth_gazebo` | Gazebo simulation with 3 colored race cars (Red, Blue, Green) and a race track |
-| `ee_cs_265a` | Course package for autonomous racing algorithms (wall following, gap finding, etc.) |
+| `ee_cs_265a` | package for algorithms |
 
 ## Prerequisites
 
