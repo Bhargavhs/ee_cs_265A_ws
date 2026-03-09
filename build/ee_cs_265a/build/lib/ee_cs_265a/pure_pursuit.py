@@ -43,7 +43,7 @@ class PurePursuit(Node):
         self.odom = None
 
         # Subscriptions
-        self.create_subscription(Path, '/global_path', self.path_cb, 10)
+        self.create_subscription(Path, '/local_path', self.path_cb, 10)
         self.create_subscription(Odometry, '/red/odometry', self.odom_cb, 10)
 
         # Publisher
