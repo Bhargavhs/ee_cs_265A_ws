@@ -1,0 +1,28 @@
+[0.273s] Invoking command in '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a': CONDA_PROMPT_MODIFIER=(f1tenth) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build --no-deps symlink_data --force
+[0.383s] running develop
+[0.454s] running egg_info
+[0.454s] writing ee_cs_265a.egg-info/PKG-INFO
+[0.454s] writing dependency_links to ee_cs_265a.egg-info/dependency_links.txt
+[0.454s] writing entry points to ee_cs_265a.egg-info/entry_points.txt
+[0.454s] writing requirements to ee_cs_265a.egg-info/requires.txt
+[0.454s] writing top-level names to ee_cs_265a.egg-info/top_level.txt
+[0.455s] reading manifest file 'ee_cs_265a.egg-info/SOURCES.txt'
+[0.455s] writing manifest file 'ee_cs_265a.egg-info/SOURCES.txt'
+[0.455s] running build_ext
+[0.455s] Creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee-cs-265a.egg-link (link to .)
+[0.457s] Installing global_planner script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+[0.457s] Installing pure_pursuit script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+[0.457s] Installing trajectory_plotter script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+[0.457s] 
+[0.457s] Installed /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a
+[0.457s] running symlink_data
+[0.457s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/resource/ee_cs_265a -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index/resource_index/packages
+[0.457s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/package.xml -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a
+[0.457s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/launch/planning.launch.py -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/launch
+[0.457s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/launch/mapping.launch.py -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/launch
+[0.458s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/config/mapper_params_online_async.yaml -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/config
+[0.458s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/maps/ground_truth_map.pgm -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps
+[0.458s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/maps/ground_truth_map.yaml -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps
+[0.458s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/maps/track_map.pgm -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps
+[0.458s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/maps/track_map.yaml -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps
+[0.469s] Invoked command in '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a' returned '0': CONDA_PROMPT_MODIFIER=(f1tenth) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build --no-deps symlink_data --force

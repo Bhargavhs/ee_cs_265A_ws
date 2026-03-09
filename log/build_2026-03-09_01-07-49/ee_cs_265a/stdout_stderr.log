@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing ee_cs_265a.egg-info/PKG-INFO
+writing dependency_links to ee_cs_265a.egg-info/dependency_links.txt
+writing entry points to ee_cs_265a.egg-info/entry_points.txt
+writing requirements to ee_cs_265a.egg-info/requires.txt
+writing top-level names to ee_cs_265a.egg-info/top_level.txt
+reading manifest file 'ee_cs_265a.egg-info/SOURCES.txt'
+writing manifest file 'ee_cs_265a.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee-cs-265a.egg-link (link to .)
+Installing global_planner script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+Installing gt_localizer script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+Installing pure_pursuit script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+Installing trajectory_plotter script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+
+Installed /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a
+running symlink_data

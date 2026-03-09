@@ -69,13 +69,13 @@ def generate_launch_description():
                 '-name', 'car1_red',
                 '-topic', '/car1/robot_description',
                 '-x', '0.0',
-                '-y', '5.0',
+                '-y', '9.2',
                 '-z', '0.1',
                 '-Y', '0.0'
             ],
             output='screen',
         ),
-        
+
         # Spawn BLUE car - center position on track
         Node(
             package='ros_gz_sim',
@@ -84,13 +84,13 @@ def generate_launch_description():
                 '-name', 'car2_blue',
                 '-topic', '/car2/robot_description',
                 '-x', '0.0',
-                '-y', '6.0',
+                '-y', '10.0',
                 '-z', '0.1',
                 '-Y', '0.0'
             ],
             output='screen',
         ),
-        
+
         # Spawn GREEN car - right position on track
         Node(
             package='ros_gz_sim',
@@ -99,14 +99,14 @@ def generate_launch_description():
                 '-name', 'car3_green',
                 '-topic', '/car3/robot_description',
                 '-x', '0.0',
-                '-y', '7.0',
+                '-y', '10.8',
                 '-z', '0.1',
                 '-Y', '0.0'
             ],
             output='screen',
         ),
         
-        # Bridge for RED car
+        # Bridge for RED car (cmd_vel, odometry, lidar scan, TF)
         Node(
             package='ros_gz_bridge',
             executable='parameter_bridge',
@@ -114,15 +114,49 @@ def generate_launch_description():
             arguments=[
                 '/model/car1_red/cmd_vel@geometry_msgs/msg/Twist]ignition.msgs.Twist',
                 '/model/car1_red/odometry@nav_msgs/msg/Odometry[ignition.msgs.Odometry',
+                '/red_scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan',
+                '/model/car1_red/tf@tf2_msgs/msg/TFMessage[ignition.msgs.Pose_V',
             ],
             remappings=[
                 ('/model/car1_red/cmd_vel', '/red/cmd_vel'),
                 ('/model/car1_red/odometry', '/red/odometry'),
+                ('/red_scan', '/red/scan'),
+                ('/model/car1_red/tf', '/tf'),
             ],
             output='screen',
         ),
 
-        # Bridge for BLUE car
+        # NOTE: map -> odom is published by AMCL in planning.launch.py
+
+        # Static TF: laser -> car1_red/base_link/lidar (lidar frame alias)
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='lidar_frame_car1',
+            arguments=['0', '0', '0', '0', '0', '0', 'laser', 'car1_red/base_link/lidar'],
+            parameters=[{'use_sim_time': True}],
+        ),
+
+        # Fallback static TFs in case Ackermann plugin ignores frame_id params
+        # odom -> car1_red/odom
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='odom_frame_car1',
+            arguments=['0', '0', '0', '0', '0', '0', 'odom', 'car1_red/odom'],
+            parameters=[{'use_sim_time': True}],
+        ),
+
+        # car1_red/base_link -> base_link
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='base_frame_car1',
+            arguments=['0', '0', '0', '0', '0', '0', 'car1_red/base_link', 'base_link'],
+            parameters=[{'use_sim_time': True}],
+        ),
+
+        # Bridge for BLUE car (cmd_vel, odometry only - scan shared topic issue)
         Node(
             package='ros_gz_bridge',
             executable='parameter_bridge',
@@ -138,7 +172,7 @@ def generate_launch_description():
             output='screen',
         ),
 
-        # Bridge for GREEN car
+        # Bridge for GREEN car (cmd_vel, odometry only - scan shared topic issue)
         Node(
             package='ros_gz_bridge',
             executable='parameter_bridge',

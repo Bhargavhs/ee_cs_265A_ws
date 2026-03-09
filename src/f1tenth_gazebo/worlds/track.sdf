@@ -5,14 +5,14 @@
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
-    
+
     <plugin filename="libignition-gazebo-physics-system.so" name="ignition::gazebo::systems::Physics"/>
     <plugin filename="libignition-gazebo-user-commands-system.so" name="ignition::gazebo::systems::UserCommands"/>
     <plugin filename="libignition-gazebo-scene-broadcaster-system.so" name="ignition::gazebo::systems::SceneBroadcaster"/>
     <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
-    
+
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>
@@ -21,350 +21,234 @@
       <direction>-0.5 0.1 -0.9</direction>
     </light>
 
-    <!-- Track surface (dark asphalt) -->
+    <!-- Track surface -->
     <model name="track_surface">
       <static>true</static>
       <link name="link">
         <collision name="collision">
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>30 20</size>
-            </plane>
-          </geometry>
-          <surface>
-            <friction>
-              <ode><mu>1.0</mu><mu2>1.0</mu2></ode>
-            </friction>
-          </surface>
+          <geometry><plane><normal>0 0 1</normal><size>26 30</size></plane></geometry>
+          <surface><friction><ode><mu>1.5</mu><mu2>1.5</mu2></ode></friction></surface>
         </collision>
         <visual name="visual">
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>30 20</size>
-            </plane>
-          </geometry>
-          <material>
-            <ambient>0.15 0.15 0.15 1</ambient>
-            <diffuse>0.15 0.15 0.15 1</diffuse>
-          </material>
+          <geometry><plane><normal>0 0 1</normal><size>26 30</size></plane></geometry>
+          <material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- ========== OUTER WALLS ========== -->
+    <!-- ========== OUTER WALLS (x ∈ [-10,10], y ∈ [-12,12]) ========== -->
     <model name="outer_north">
+      <static>true</static>
+      <pose>0 12 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>20 0.15 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>20 0.15 0.3</size></box></geometry>
+          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="outer_south">
+      <static>true</static>
+      <pose>0 -12 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>20 0.15 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>20 0.15 0.3</size></box></geometry>
+          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="outer_east">
+      <static>true</static>
+      <pose>10 0 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.15 24 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.15 24 0.3</size></box></geometry>
+          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="outer_west">
+      <static>true</static>
+      <pose>-10 0 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.15 24 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.15 24 0.3</size></box></geometry>
+          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <!-- ========== UPPER ISLAND (x ∈ [-5,5], y ∈ [4,8]) ========== -->
+    <model name="upper_north">
       <static>true</static>
       <pose>0 8 0.15 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>24 0.15 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>24 0.15 0.3</size></box></geometry>
-          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
-        </visual>
+        <collision name="collision"><geometry><box><size>10 0.15 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>10 0.15 0.3</size></box></geometry>
+          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material></visual>
       </link>
     </model>
-
-    <model name="outer_south">
-      <static>true</static>
-      <pose>0 -8 0.15 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><box><size>24 0.15 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>24 0.15 0.3</size></box></geometry>
-          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <model name="outer_east">
-      <static>true</static>
-      <pose>12 0 0.15 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><box><size>0.15 16 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>0.15 16 0.3</size></box></geometry>
-          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <model name="outer_west">
-      <static>true</static>
-      <pose>-12 0 0.15 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><box><size>0.15 16 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>0.15 16 0.3</size></box></geometry>
-          <material><ambient>0.9 0.9 0.9 1</ambient><diffuse>0.9 0.9 0.9 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <!-- ========== INNER WALLS ========== -->
-    <model name="inner_north">
+    <model name="upper_south">
       <static>true</static>
       <pose>0 4 0.15 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>16 0.15 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>16 0.15 0.3</size></box></geometry>
-          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
-        </visual>
+        <collision name="collision"><geometry><box><size>10 0.15 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>10 0.15 0.3</size></box></geometry>
+          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="upper_east">
+      <static>true</static>
+      <pose>5 6 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.15 4 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.15 4 0.3</size></box></geometry>
+          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="upper_west">
+      <static>true</static>
+      <pose>-5 6 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.15 4 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.15 4 0.3</size></box></geometry>
+          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material></visual>
       </link>
     </model>
 
-    <model name="inner_south">
+    <!-- ========== LOWER ISLAND (x ∈ [-5,5], y ∈ [-8,-4]) ========== -->
+    <model name="lower_north">
       <static>true</static>
       <pose>0 -4 0.15 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>16 0.15 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>16 0.15 0.3</size></box></geometry>
-          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
-        </visual>
+        <collision name="collision"><geometry><box><size>10 0.15 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>10 0.15 0.3</size></box></geometry>
+          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="lower_south">
+      <static>true</static>
+      <pose>0 -8 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>10 0.15 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>10 0.15 0.3</size></box></geometry>
+          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="lower_east">
+      <static>true</static>
+      <pose>5 -6 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.15 4 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.15 4 0.3</size></box></geometry>
+          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="lower_west">
+      <static>true</static>
+      <pose>-5 -6 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.15 4 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.15 4 0.3</size></box></geometry>
+          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material></visual>
       </link>
     </model>
 
-    <model name="inner_east">
+    <!-- ========== CENTER SQUARE BLOCK (x ∈ [-1.5,1.5], y ∈ [-1.5,1.5]) ========== -->
+    <model name="center_north">
       <static>true</static>
-      <pose>8 0 0.15 0 0 0</pose>
+      <pose>0 1.5 0.15 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>0.15 8 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>0.15 8 0.3</size></box></geometry>
-          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
-        </visual>
+        <collision name="collision"><geometry><box><size>3 0.15 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>3 0.15 0.3</size></box></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient><diffuse>0.8 0.2 0.2 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="center_south">
+      <static>true</static>
+      <pose>0 -1.5 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>3 0.15 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>3 0.15 0.3</size></box></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient><diffuse>0.8 0.2 0.2 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="center_east">
+      <static>true</static>
+      <pose>1.5 0 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.15 3 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.15 3 0.3</size></box></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient><diffuse>0.8 0.2 0.2 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="center_west">
+      <static>true</static>
+      <pose>-1.5 0 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.15 3 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.15 3 0.3</size></box></geometry>
+          <material><ambient>0.8 0.2 0.2 1</ambient><diffuse>0.8 0.2 0.2 1</diffuse></material></visual>
       </link>
     </model>
 
-    <model name="inner_west">
+    <!-- ========== STATIC OBSTACLES ========== -->
+    <model name="obs_top">
       <static>true</static>
-      <pose>-8 0 0.15 0 0 0</pose>
+      <pose>3 -10 0.15 0 0 0</pose>
       <link name="link">
-        <collision name="collision">
-          <geometry><box><size>0.15 8 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>0.15 8 0.3</size></box></geometry>
-          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
-        </visual>
+        <collision name="collision"><geometry><box><size>0.8 0.4 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.8 0.4 0.3</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="obs_bottom">
+      <static>true</static>
+      <pose>-3 -10 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.8 0.4 0.3</size></box></geometry></collision>
+        <visual name="visual"><geometry><box><size>0.8 0.4 0.3</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="obs_right">
+      <static>true</static>
+      <pose>7.5 6 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><cylinder><radius>0.3</radius><length>0.3</length></cylinder></geometry></collision>
+        <visual name="visual"><geometry><cylinder><radius>0.3</radius><length>0.3</length></cylinder></geometry>
+          <material><ambient>0 0.8 0 1</ambient><diffuse>0 0.8 0 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="obs_left">
+      <static>true</static>
+      <pose>-7.5 -6 0.15 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><cylinder><radius>0.3</radius><length>0.3</length></cylinder></geometry></collision>
+        <visual name="visual"><geometry><cylinder><radius>0.3</radius><length>0.3</length></cylinder></geometry>
+          <material><ambient>0 0.8 0 1</ambient><diffuse>0 0.8 0 1</diffuse></material></visual>
       </link>
     </model>
 
-    <!-- ========== CHICANE OBSTACLES ========== -->
-    <model name="chicane_1">
+    <!-- ========== START LINE ========== -->
+    <model name="start_stripe">
       <static>true</static>
-      <pose>-10 6 0.15 0 0 0.3</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><box><size>2 0.15 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>2 0.15 0.3</size></box></geometry>
-          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <model name="chicane_2">
-      <static>true</static>
-      <pose>10 6 0.15 0 0 -0.3</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><box><size>2 0.15 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>2 0.15 0.3</size></box></geometry>
-          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <model name="chicane_3">
-      <static>true</static>
-      <pose>-10 -6 0.15 0 0 -0.3</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><box><size>2 0.15 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>2 0.15 0.3</size></box></geometry>
-          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <model name="chicane_4">
-      <static>true</static>
-      <pose>10 -6 0.15 0 0 0.3</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><box><size>2 0.15 0.3</size></box></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><box><size>2 0.15 0.3</size></box></geometry>
-          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <!-- ========== CORNER CONES ========== -->
-    <model name="cone_1">
-      <static>true</static>
-      <pose>11.5 7.5 0.15 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><cylinder><radius>0.15</radius><length>0.3</length></cylinder></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><cylinder><radius>0.15</radius><length>0.3</length></cylinder></geometry>
-          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <model name="cone_2">
-      <static>true</static>
-      <pose>-11.5 7.5 0.15 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><cylinder><radius>0.15</radius><length>0.3</length></cylinder></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><cylinder><radius>0.15</radius><length>0.3</length></cylinder></geometry>
-          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <model name="cone_3">
-      <static>true</static>
-      <pose>11.5 -7.5 0.15 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><cylinder><radius>0.15</radius><length>0.3</length></cylinder></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><cylinder><radius>0.15</radius><length>0.3</length></cylinder></geometry>
-          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <model name="cone_4">
-      <static>true</static>
-      <pose>-11.5 -7.5 0.15 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry><cylinder><radius>0.15</radius><length>0.3</length></cylinder></geometry>
-        </collision>
-        <visual name="visual">
-          <geometry><cylinder><radius>0.15</radius><length>0.3</length></cylinder></geometry>
-          <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <!-- ========== START/FINISH LINE - Full width from inner to outer wall ========== -->
-    <!-- White stripe 1 -->
-    <model name="start_stripe_1">
-      <static>true</static>
-      <pose>0.4 6.0 0.01 0 0 0</pose>
+      <pose>0 10 0.01 0 0 0</pose>
       <link name="link">
         <visual name="visual">
-          <geometry><box><size>0.4 4.0 0.01</size></box></geometry>
+          <geometry><box><size>0.3 4 0.01</size></box></geometry>
           <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <!-- Black stripe 1 -->
-    <!-- <model name="start_stripe_2">
+    <!-- ========== GOAL MARKER ========== -->
+    <model name="goal_marker">
       <static>true</static>
-      <pose>0.4 6.0 0.01 0 0 0</pose>
+      <pose>7.5 -10 0.01 0 0 0</pose>
       <link name="link">
         <visual name="visual">
-          <geometry><box><size>0.4 4.0 0.01</size></box></geometry>
-          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model> -->
-
-    <!-- White stripe 2 -->
-    <model name="start_stripe_3">
-      <static>true</static>
-      <pose>0.8 6.0 0.01 0 0 0</pose>
-      <link name="link">
-        <visual name="visual">
-          <geometry><box><size>0.4 4.0 0.01</size></box></geometry>
-          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-
-    <!-- Black stripe 2 -->
-    <!-- <model name="start_stripe_4">
-      <static>true</static>
-      <pose>1.2 6.0 0.01 0 0 0</pose>
-      <link name="link">
-        <visual name="visual">
-          <geometry><box><size>0.4 4.0 0.01</size></box></geometry>
-          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
-        </visual>
-      </link>
-    </model> -->
-
-    <!-- White stripe 3 -->
-    <model name="start_stripe_5">
-      <static>true</static>
-      <pose>-0.4 6.0 0.01 0 0 0</pose>
-      <link name="link">
-        <visual name="visual">
-          <geometry><box><size>0.4 4.0 0.01</size></box></geometry>
-          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
-        </visual>
-      </link>
-    </model>
-<!-- 
-    Black stripe 3
-    <model name="start_stripe_6">
-      <static>true</static>
-      <pose>-0.8 6.0 0.01 0 0 0</pose>
-      <link name="link">
-        <visual name="visual">
-          <geometry><box><size>0.4 4.0 0.01</size></box></geometry>
+          <geometry><cylinder><radius>0.4</radius><length>0.02</length></cylinder></geometry>
           <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
         </visual>
       </link>
     </model>
-
-    White stripe 4
-    <model name="start_stripe_7">
-      <static>true</static>
-      <pose>-1.2 6.0 0.01 0 0 0</pose>
-      <link name="link">
-        <visual name="visual">
-          <geometry><box><size>0.4 4.0 0.01</size></box></geometry>
-          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
-        </visual>
-      </link>
-    </model> -->
 
   </world>
 </sdf>
