@@ -32,7 +32,7 @@ def generate_launch_description():
             }],
         ),
 
-        # Local Planner - RRT for dynamic obstacle avoidance
+        # Local Planner - RRT* for dynamic obstacle avoidance
         Node(
             package='ee_cs_265a',
             executable='local_planner',
@@ -41,15 +41,16 @@ def generate_launch_description():
             parameters=[{
                 'use_sim_time': True,
                 'scan_topic': '/red/scan',
-                'obstacle_radius': 0.4,
-                'path_check_distance': 4.0,
-                'path_block_threshold': 0.6,
+                'obstacle_radius': 0.5,
+                'path_check_distance': 5.0,
+                'path_block_threshold': 0.8,
                 'rrt_step_size': 0.3,
-                'rrt_max_iter': 500,
+                'rrt_max_iter': 800,
                 'rrt_goal_bias': 0.3,
-                'rrt_search_radius': 5.0,
+                'rrt_search_radius': 6.0,
+                'rrt_rewire_radius': 1.5,
                 'replan_rate': 5.0,
-                'rejoin_distance': 2.0,
+                'rejoin_distance': 3.0,
             }],
         ),
 
@@ -203,7 +204,7 @@ def generate_launch_description():
             parameters=[{
                 'use_sim_time': True,
                 'record_interval': 0.2,
-                'save_path': '/tmp/trajectory_plot.png',
+                'save_path': '/home/bhargav/ee_cs_265A_ws/src/ee_cs_265a/trajectory_plot.png',
             }],
         ),
     ])

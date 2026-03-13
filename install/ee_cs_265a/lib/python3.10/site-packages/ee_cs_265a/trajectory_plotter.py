@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Path, Odometry
 from geometry_msgs.msg import PoseStamped
+from visualization_msgs.msg import Marker
 import tf2_ros
 from tf2_geometry_msgs import do_transform_pose_stamped
 import matplotlib
@@ -47,15 +48,21 @@ class TrajectoryPlotter(Node):
         self.green_spawn_y = 10.8
         self.green_spawn_yaw = 0.0
 
+        # RRT* tree and path (latest snapshot for plotting)
+        self.rrt_tree_edges = []   # list of ((x1,y1),(x2,y2))
+        self.rrt_path_pts = []     # list of (x,y)
+
         # Subscriptions
         self.create_subscription(Odometry, '/red/odometry', self.odom_cb, 10)
         self.create_subscription(Path, '/global_path', self.path_cb, 10)
         self.create_subscription(Odometry, '/blue/odometry', self.blue_odom_cb, 10)
         self.create_subscription(Odometry, '/green/odometry', self.green_odom_cb, 10)
+        self.create_subscription(Marker, '/rrt_tree', self.rrt_tree_cb, 10)
+        self.create_subscription(Marker, '/rrt_path', self.rrt_path_cb, 10)
 
         self.last_odom = None
         self.timer = self.create_timer(interval, self.record)
-        self.save_timer = self.create_timer(10.0, self.save_plot)
+        self.save_timer = self.create_timer(1.0, self.save_plot)
 
         self.get_logger().info('Trajectory plotter ready, will save to ' + self.save_path)
 
@@ -75,8 +82,25 @@ class TrajectoryPlotter(Node):
             self.path_received = True
             self.get_logger().info(f'Global path recorded: {len(msg.poses)} points')
 
+    def rrt_tree_cb(self, msg):
+        """Receive RRT* tree edges (LINE_LIST marker)."""
+        if msg.action == Marker.DELETE:
+            self.rrt_tree_edges = []
+            return
+        edges = []
+        pts = msg.points
+        for i in range(0, len(pts) - 1, 2):
+            edges.append(((pts[i].x, pts[i].y), (pts[i + 1].x, pts[i + 1].y)))
+        self.rrt_tree_edges = edges
+
+    def rrt_path_cb(self, msg):
+        """Receive RRT* final path (LINE_STRIP marker)."""
+        if msg.action == Marker.DELETE:
+            self.rrt_path_pts = []
+            return
+        self.rrt_path_pts = [(p.x, p.y) for p in msg.points]
+
     def _odom_to_world(self, odom_msg, spawn_x, spawn_y, spawn_yaw):
-        """Convert odom-frame pose to world frame using spawn offset."""
         ox = odom_msg.pose.pose.position.x
         oy = odom_msg.pose.pose.position.y
         cos_s = math.cos(spawn_yaw)
@@ -141,6 +165,22 @@ class TrajectoryPlotter(Node):
         center = plt.Rectangle((-1.5, -1.5), 3, 3, fill=True, facecolor='mistyrose', edgecolor='darkred', linewidth=1.5, label='Center block')
         ax.add_patch(center)
 
+        # RRT* tree edges (light blue, behind everything)
+        if self.rrt_tree_edges:
+            rrt_labeled = False
+            for (x1, y1), (x2, y2) in self.rrt_tree_edges:
+                label = 'RRT* tree' if not rrt_labeled else None
+                ax.plot([x1, x2], [y1, y2], color='cornflowerblue',
+                        linewidth=0.5, alpha=0.4, label=label)
+                rrt_labeled = True
+
+        # RRT* final path (yellow, thick)
+        if self.rrt_path_pts:
+            rrt_xs = [p[0] for p in self.rrt_path_pts]
+            rrt_ys = [p[1] for p in self.rrt_path_pts]
+            ax.plot(rrt_xs, rrt_ys, color='orange', linewidth=2.5,
+                    alpha=0.9, label='RRT* path')
+
         if self.path_received:
             ax.plot(self.path_xs, self.path_ys, 'g--', linewidth=1.5, alpha=0.7, label='Global path')
 
@@ -156,13 +196,13 @@ class TrajectoryPlotter(Node):
 
         # Green car trajectory
         if len(self.green_xs) > 1:
-            ax.plot(self.green_xs, self.green_ys, 'g-', linewidth=1.2, alpha=0.7, label='Green (obstacle)')
-            ax.plot(self.green_xs[-1], self.green_ys[-1], 'g*', markersize=12)
+            ax.plot(self.green_xs, self.green_ys, color='limegreen', linewidth=1.2, alpha=0.7, label='Green (obstacle)')
+            ax.plot(self.green_xs[-1], self.green_ys[-1], color='limegreen', marker='*', markersize=12)
 
         ax.set_xlabel('X (m)')
         ax.set_ylabel('Y (m)')
-        ax.set_title('Robot Trajectory vs Global Path')
-        ax.legend(loc='upper right')
+        ax.set_title('Hierarchical Global-Local Motion Planning')
+        ax.legend(loc='upper right', fontsize=8)
         ax.set_aspect('equal')
         ax.grid(True, alpha=0.3)
         ax.set_xlim(-12, 12)
@@ -172,7 +212,8 @@ class TrajectoryPlotter(Node):
         plt.close(fig)
         self.get_logger().info(
             f'Plot saved: {self.save_path} '
-            f'(red={len(self.robot_xs)}, blue={len(self.blue_xs)}, green={len(self.green_xs)} pts)'
+            f'(red={len(self.robot_xs)}, blue={len(self.blue_xs)}, '
+            f'green={len(self.green_xs)}, rrt_edges={len(self.rrt_tree_edges)} pts)'
         )
 
 

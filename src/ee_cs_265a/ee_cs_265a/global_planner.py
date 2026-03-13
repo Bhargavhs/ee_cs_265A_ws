@@ -93,7 +93,6 @@ class GlobalPlanner(Node):
         unknown_mask = (self.occupancy == -1)
         obstacle_mask = occupied_mask | unknown_mask
 
-        # Create circular structuring element
         y, x = np.ogrid[-inflation_cells:inflation_cells + 1,
                          -inflation_cells:inflation_cells + 1]
         struct = (x * x + y * y) <= (inflation_cells * inflation_cells)
@@ -102,7 +101,6 @@ class GlobalPlanner(Node):
 
         self.inflated_occ = self.occupancy.copy()
         self.inflated_occ[inflated] = 100
-        # Keep original free cells that weren't inflated
         self.free_mask = (self.inflated_occ == 0)
 
         # Build proximity cost map: cells near obstacles cost more
@@ -249,14 +247,12 @@ class GlobalPlanner(Node):
                     )
                 )
 
-                # Validate the COMBINED new position
                 check_gx = int(round(new_x))
                 check_gy = int(round(new_y))
                 if self.is_valid(check_gx, check_gy):
                     smoothed[i][0] = new_x
                     smoothed[i][1] = new_y
                     change += abs(new_x - old_x) + abs(new_y - old_y)
-                # else: keep old position entirely
 
             if change < tolerance:
                 self.get_logger().info(
@@ -264,7 +260,6 @@ class GlobalPlanner(Node):
                 )
                 break
 
-        # Convert back to integer grid coords
         result = [(int(round(p[0])), int(round(p[1]))) for p in smoothed]
         self.get_logger().info(f'Smoothed path: {len(result)} points')
         return result
@@ -299,16 +294,13 @@ class GlobalPlanner(Node):
                 self.global_path = None
                 return
 
-            # Append segment (skip first point to avoid duplicates)
             if full_grid_path:
                 full_grid_path.extend(segment[1:])
             else:
                 full_grid_path.extend(segment)
 
-        # Smooth the path
         full_grid_path = self.smooth_path(full_grid_path)
 
-        # Downsample path based on waypoint spacing
         spacing = self.get_parameter('waypoint_spacing').value
         spacing_cells = max(1, int(spacing / self.resolution))
 
@@ -317,7 +309,6 @@ class GlobalPlanner(Node):
         if sampled[-1] != full_grid_path[-1]:
             sampled.append(full_grid_path[-1])
 
-        # Build Path message
         self.global_path = Path()
         self.global_path.header.frame_id = 'map'
 
@@ -346,7 +337,6 @@ class GlobalPlanner(Node):
             pose.header.stamp = now
         self.path_pub.publish(self.global_path)
 
-        # Also publish inflated map for visualization
         self.publish_inflated_map()
 
     def publish_inflated_map(self):
@@ -359,7 +349,7 @@ class GlobalPlanner(Node):
         msg.info.origin.position.x = float(self.origin_x)
         msg.info.origin.position.y = float(self.origin_y)
 
-        # Convert to OccupancyGrid format: 0=free, 100=occupied, -1=unknown
+        # OccupancyGrid format: 0=free, 100=occupied, -1=unknown
         data = self.inflated_occ.flatten().tolist()
         msg.data = data
         self.inflated_map_pub.publish(msg)

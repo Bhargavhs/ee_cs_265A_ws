@@ -4,14 +4,12 @@
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/dynamic_agent.py
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/pure_pursuit.py
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/global_planner.py
-/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/gt_localizer.py
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__pycache__/local_planner.cpython-310.pyc
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__pycache__/trajectory_plotter.cpython-310.pyc
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__pycache__/__init__.cpython-310.pyc
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__pycache__/dynamic_agent.cpython-310.pyc
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__pycache__/pure_pursuit.cpython-310.pyc
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__pycache__/global_planner.cpython-310.pyc
-/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/__pycache__/gt_localizer.cpython-310.pyc
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ament_index/resource_index/packages/ee_cs_265a
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/package.xml
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/launch/planning.launch.py

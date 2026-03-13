@@ -12,7 +12,6 @@ config/mapper_params_online_async.yaml
 ee_cs_265a/__init__.py
 ee_cs_265a/dynamic_agent.py
 ee_cs_265a/global_planner.py
-ee_cs_265a/gt_localizer.py
 ee_cs_265a/local_planner.py
 ee_cs_265a/pure_pursuit.py
 ee_cs_265a/trajectory_plotter.py

@@ -62,6 +62,8 @@ class PurePursuit(Node):
     def path_cb(self, msg):
         if len(msg.poses) > 0:
             self.path = msg
+            # Reset goal_reached when a new path arrives so the car can resume
+            self.goal_reached = False
 
     def odom_cb(self, msg):
         self.odom = msg

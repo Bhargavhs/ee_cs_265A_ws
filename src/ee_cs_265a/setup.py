@@ -32,7 +32,6 @@ setup(
             'global_planner = ee_cs_265a.global_planner:main',
             'pure_pursuit = ee_cs_265a.pure_pursuit:main',
             'trajectory_plotter = ee_cs_265a.trajectory_plotter:main',
-            'gt_localizer = ee_cs_265a.gt_localizer:main',
             'dynamic_agent = ee_cs_265a.dynamic_agent:main',
             'local_planner = ee_cs_265a.local_planner:main',
         ],
