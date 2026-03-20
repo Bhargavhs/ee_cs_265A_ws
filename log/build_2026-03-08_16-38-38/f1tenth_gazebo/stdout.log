@@ -1,0 +1,14 @@
+running develop
+running egg_info
+writing f1tenth_gazebo.egg-info/PKG-INFO
+writing dependency_links to f1tenth_gazebo.egg-info/dependency_links.txt
+writing entry points to f1tenth_gazebo.egg-info/entry_points.txt
+writing requirements to f1tenth_gazebo.egg-info/requires.txt
+writing top-level names to f1tenth_gazebo.egg-info/top_level.txt
+reading manifest file 'f1tenth_gazebo.egg-info/SOURCES.txt'
+writing manifest file 'f1tenth_gazebo.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth-gazebo.egg-link (link to .)
+
+Installed /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo
+running symlink_data

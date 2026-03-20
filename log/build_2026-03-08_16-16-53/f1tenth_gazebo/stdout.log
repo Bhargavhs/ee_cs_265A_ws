@@ -1,0 +1,36 @@
+running develop
+running egg_info
+writing f1tenth_gazebo.egg-info/PKG-INFO
+writing dependency_links to f1tenth_gazebo.egg-info/dependency_links.txt
+writing entry points to f1tenth_gazebo.egg-info/entry_points.txt
+writing requirements to f1tenth_gazebo.egg-info/requires.txt
+writing top-level names to f1tenth_gazebo.egg-info/top_level.txt
+reading manifest file 'f1tenth_gazebo.egg-info/SOURCES.txt'
+writing manifest file 'f1tenth_gazebo.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth-gazebo.egg-link (link to .)
+
+Installed /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo
+running symlink_data
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/resource/f1tenth_gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/ament_index/resource_index/packages
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/package.xml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/launch/f1tenth_gazebo.launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/launch
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/launch/f1tenth_ign.launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/launch
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/worlds/track.sdf -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/worlds/demo_track.world -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/materials.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_red.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_green.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/macros.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_blue.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_green.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_blue.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_red.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_ign.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/hinge.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/chassis.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/right_wheel.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/left_wheel.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/hokuyo.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes

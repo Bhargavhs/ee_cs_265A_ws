@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/PKG-INFO
+writing dependency_links to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/dependency_links.txt
+writing entry points to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/entry_points.txt
+writing requirements to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/requires.txt
+writing top-level names to ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/top_level.txt
+reading manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'
+writing manifest file '../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/f1tenth_ign.launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/launch
+copying worlds/track.sdf -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds
+running install_egg_info
+removing '/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/f1tenth_gazebo/f1tenth_gazebo.egg-info to /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth_gazebo-0.0.1-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/install.log'

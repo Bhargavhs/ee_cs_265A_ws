@@ -11,6 +11,9 @@
   <depend>ackermann_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>slam_toolbox</depend>
+  <depend>teleop_twist_keyboard</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

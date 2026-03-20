@@ -1,0 +1,38 @@
+[0.406s] Invoking command in '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo': CONDA_PROMPT_MODIFIER=(f1tenth) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build --no-deps symlink_data --force
+[0.527s] running develop
+[0.606s] running egg_info
+[0.606s] writing f1tenth_gazebo.egg-info/PKG-INFO
+[0.606s] writing dependency_links to f1tenth_gazebo.egg-info/dependency_links.txt
+[0.606s] writing entry points to f1tenth_gazebo.egg-info/entry_points.txt
+[0.606s] writing requirements to f1tenth_gazebo.egg-info/requires.txt
+[0.606s] writing top-level names to f1tenth_gazebo.egg-info/top_level.txt
+[0.607s] reading manifest file 'f1tenth_gazebo.egg-info/SOURCES.txt'
+[0.607s] writing manifest file 'f1tenth_gazebo.egg-info/SOURCES.txt'
+[0.609s] running build_ext
+[0.609s] Creating /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages/f1tenth-gazebo.egg-link (link to .)
+[0.609s] 
+[0.609s] Installed /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo
+[0.609s] running symlink_data
+[0.609s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/resource/f1tenth_gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/ament_index/resource_index/packages
+[0.609s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/package.xml -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo
+[0.609s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/launch/f1tenth_gazebo.launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/launch
+[0.609s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/launch/f1tenth_ign.launch.py -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/launch
+[0.609s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/worlds/track.sdf -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds
+[0.609s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/worlds/demo_track.world -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/worlds
+[0.609s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/materials.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.610s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_red.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.610s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_green.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/macros.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_blue.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_green.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_blue.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_red.xacro -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/urdf/racecar_ign.gazebo -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/urdf
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/hinge.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/chassis.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/right_wheel.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/left_wheel.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+[0.611s] symbolically linking /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/meshes/hokuyo.stl -> /home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/share/f1tenth_gazebo/meshes
+[0.631s] Invoked command in '/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo' returned '0': CONDA_PROMPT_MODIFIER=(f1tenth) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/f1tenth_gazebo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/bhargav/ee_cs_265A_ws/build/f1tenth_gazebo/build --no-deps symlink_data --force

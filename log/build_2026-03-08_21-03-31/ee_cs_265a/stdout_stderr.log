@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/ee_cs_265a/ee_cs_265a.egg-info/PKG-INFO
+writing dependency_links to ../../build/ee_cs_265a/ee_cs_265a.egg-info/dependency_links.txt
+writing entry points to ../../build/ee_cs_265a/ee_cs_265a.egg-info/entry_points.txt
+writing requirements to ../../build/ee_cs_265a/ee_cs_265a.egg-info/requires.txt
+writing top-level names to ../../build/ee_cs_265a/ee_cs_265a.egg-info/top_level.txt
+reading manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'
+writing manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ee_cs_265a/trajectory_plotter.py -> /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a
+copying ee_cs_265a/pure_pursuit.py -> /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a
+running install
+running install_lib
+copying /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a/trajectory_plotter.py -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a
+copying /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build/lib/ee_cs_265a/pure_pursuit.py -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a
+byte-compiling /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/trajectory_plotter.py to trajectory_plotter.cpython-310.pyc
+byte-compiling /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a/pure_pursuit.py to pure_pursuit.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/ee_cs_265a/ee_cs_265a.egg-info to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info
+running install_scripts
+Installing global_planner script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+Installing pure_pursuit script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+Installing trajectory_plotter script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log'

@@ -1,0 +1,25 @@
+[0.300s] Invoking command in '/home/bhargav/ee_cs_265A_ws/src/ee_cs_265a': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ee_cs_265a build --build-base /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build install --record /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log --single-version-externally-managed install_data
+[0.404s] running egg_info
+[0.404s] writing ../../build/ee_cs_265a/ee_cs_265a.egg-info/PKG-INFO
+[0.404s] writing dependency_links to ../../build/ee_cs_265a/ee_cs_265a.egg-info/dependency_links.txt
+[0.404s] writing entry points to ../../build/ee_cs_265a/ee_cs_265a.egg-info/entry_points.txt
+[0.404s] writing requirements to ../../build/ee_cs_265a/ee_cs_265a.egg-info/requires.txt
+[0.404s] writing top-level names to ../../build/ee_cs_265a/ee_cs_265a.egg-info/top_level.txt
+[0.405s] reading manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'
+[0.405s] writing manifest file '../../build/ee_cs_265a/ee_cs_265a.egg-info/SOURCES.txt'
+[0.406s] running build
+[0.406s] running build_py
+[0.406s] running install
+[0.406s] running install_lib
+[0.406s] running install_data
+[0.407s] copying launch/planning.launch.py -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/launch
+[0.407s] copying maps/ground_truth_map.pgm -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps
+[0.407s] copying maps/ground_truth_map.yaml -> /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps
+[0.407s] running install_egg_info
+[0.408s] removing '/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info' (and everything under it)
+[0.409s] Copying ../../build/ee_cs_265a/ee_cs_265a.egg-info to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info
+[0.409s] running install_scripts
+[0.418s] Installing global_planner script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+[0.418s] Installing pure_pursuit script to /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a
+[0.418s] writing list of installed files to '/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log'
+[0.429s] Invoked command in '/home/bhargav/ee_cs_265A_ws/src/ee_cs_265a' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ee_cs_265a build --build-base /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/build install --record /home/bhargav/ee_cs_265A_ws/build/ee_cs_265a/install.log --single-version-externally-managed install_data
