@@ -265,7 +265,6 @@ class GlobalPlanner(Node):
         return result
 
     def compute_global_path(self):
-        # Parse waypoints from flat list [x1,y1, x2,y2, ...]
         wp_flat = self.get_parameter('waypoints').value
         waypoints = [(wp_flat[i], wp_flat[i + 1])
                      for i in range(0, len(wp_flat), 2)]

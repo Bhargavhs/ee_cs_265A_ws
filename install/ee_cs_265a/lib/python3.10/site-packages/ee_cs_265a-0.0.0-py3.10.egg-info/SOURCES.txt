@@ -19,8 +19,6 @@ launch/mapping.launch.py
 launch/planning.launch.py
 maps/ground_truth_map.pgm
 maps/ground_truth_map.yaml
-maps/track_map.pgm
-maps/track_map.yaml
 resource/ee_cs_265a
 test/test_copyright.py
 test/test_flake8.py

@@ -95,6 +95,14 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/red
 ros2 topic pub /red/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0}, angular: {z: 0.0}}" -r 10
 ```
 
+## Results
+
+### RRT* Dynamic Replanning
+
+![RRT* Planning Animation](src/ee_cs_265a/rrt_planning.gif)
+
+The animated GIF shows real-time RRT\* replanning as the red ego vehicle navigates around the blue obstacle car in the right corridor. Each frame captures the tree exploration (light blue), the chosen detour path (orange), and the evolving trajectories of all three cars.
+
 ## Architecture
 
 ```

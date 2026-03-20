@@ -17,8 +17,6 @@
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/config/mapper_params_online_async.yaml
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps/ground_truth_map.pgm
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps/ground_truth_map.yaml
-/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps/track_map.pgm
-/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/share/ee_cs_265a/maps/track_map.yaml
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info/SOURCES.txt
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info/entry_points.txt
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info/zip-safe
@@ -28,7 +26,6 @@
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/python3.10/site-packages/ee_cs_265a-0.0.0-py3.10.egg-info/top_level.txt
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a/dynamic_agent
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a/global_planner
-/home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a/gt_localizer
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a/local_planner
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a/pure_pursuit
 /home/bhargav/ee_cs_265A_ws/install/ee_cs_265a/lib/ee_cs_265a/trajectory_plotter

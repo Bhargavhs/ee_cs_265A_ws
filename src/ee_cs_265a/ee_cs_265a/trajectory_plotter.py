@@ -1,4 +1,6 @@
+import io
 import math
+import os
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Path, Odometry
@@ -9,6 +11,7 @@ from tf2_geometry_msgs import do_transform_pose_stamped
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from PIL import Image
 
 
 class TrajectoryPlotter(Node):
@@ -51,6 +54,7 @@ class TrajectoryPlotter(Node):
         # RRT* tree and path (latest snapshot for plotting)
         self.rrt_tree_edges = []   # list of ((x1,y1),(x2,y2))
         self.rrt_path_pts = []     # list of (x,y)
+        self.rrt_gif_frames = []   # list of PIL Image frames for GIF
 
         # Subscriptions
         self.create_subscription(Odometry, '/red/odometry', self.odom_cb, 10)
@@ -83,9 +87,9 @@ class TrajectoryPlotter(Node):
             self.get_logger().info(f'Global path recorded: {len(msg.poses)} points')
 
     def rrt_tree_cb(self, msg):
-        """Receive RRT* tree edges (LINE_LIST marker)."""
+        """Receive RRT* tree edges (LINE_LIST marker).
+        Ignore DELETE actions so the last tree persists in the plot."""
         if msg.action == Marker.DELETE:
-            self.rrt_tree_edges = []
             return
         edges = []
         pts = msg.points
@@ -94,11 +98,108 @@ class TrajectoryPlotter(Node):
         self.rrt_tree_edges = edges
 
     def rrt_path_cb(self, msg):
-        """Receive RRT* final path (LINE_STRIP marker)."""
+        """Receive RRT* final path (LINE_STRIP marker).
+        Ignore DELETE actions so the last path persists in the plot.
+        Captures a GIF frame each time new RRT* data arrives."""
         if msg.action == Marker.DELETE:
-            self.rrt_path_pts = []
             return
         self.rrt_path_pts = [(p.x, p.y) for p in msg.points]
+        self.capture_rrt_frame()
+
+    def capture_rrt_frame(self):
+        """Render the current state into a PIL Image and append to GIF frames."""
+        if not self.rrt_tree_edges and not self.rrt_path_pts:
+            return
+
+        fig, ax = plt.subplots(1, 1, figsize=(10, 12))
+
+        # Outer walls
+        ax.add_patch(plt.Rectangle((-10, -12), 20, 24, fill=False, edgecolor='black', linewidth=2, label='Outer wall'))
+        # Upper island
+        ax.add_patch(plt.Rectangle((-5, 4), 10, 4, fill=True, facecolor='lightyellow', edgecolor='orange', linewidth=1.5, label='Upper island'))
+        # Lower island
+        ax.add_patch(plt.Rectangle((-5, -8), 10, 4, fill=True, facecolor='lightyellow', edgecolor='orange', linewidth=1.5, label='Lower island'))
+        # Center block
+        ax.add_patch(plt.Rectangle((-1.5, -1.5), 3, 3, fill=True, facecolor='mistyrose', edgecolor='darkred', linewidth=1.5, label='Center block'))
+
+        # RRT* tree edges
+        if self.rrt_tree_edges:
+            rrt_labeled = False
+            for (x1, y1), (x2, y2) in self.rrt_tree_edges:
+                label = 'RRT* tree' if not rrt_labeled else None
+                ax.plot([x1, x2], [y1, y2], color='cornflowerblue',
+                        linewidth=0.5, alpha=0.4, label=label)
+                rrt_labeled = True
+
+        # RRT* final path
+        if self.rrt_path_pts:
+            rrt_xs = [p[0] for p in self.rrt_path_pts]
+            rrt_ys = [p[1] for p in self.rrt_path_pts]
+            ax.plot(rrt_xs, rrt_ys, color='orange', linewidth=2.5,
+                    alpha=0.9, label='RRT* path')
+
+        # Global path
+        if self.path_received:
+            ax.plot(self.path_xs, self.path_ys, 'g--', linewidth=1.5, alpha=0.7, label='Global path')
+
+        # Red car trajectory so far
+        if len(self.robot_xs) > 1:
+            ax.plot(self.robot_xs, self.robot_ys, 'r-', linewidth=1.5, label='Red (ego)')
+            ax.plot(self.robot_xs[-1], self.robot_ys[-1], 'r*', markersize=15)
+
+        # Blue car trajectory
+        if len(self.blue_xs) > 1:
+            ax.plot(self.blue_xs, self.blue_ys, 'b-', linewidth=1.2, alpha=0.7, label='Blue (obstacle)')
+            ax.plot(self.blue_xs[-1], self.blue_ys[-1], 'b*', markersize=12)
+
+        # Green car trajectory
+        if len(self.green_xs) > 1:
+            ax.plot(self.green_xs, self.green_ys, color='limegreen', linewidth=1.2, alpha=0.7, label='Green (obstacle)')
+            ax.plot(self.green_xs[-1], self.green_ys[-1], color='limegreen', marker='*', markersize=12)
+
+        ax.set_xlabel('X (m)')
+        ax.set_ylabel('Y (m)')
+        ax.set_title(f'RRT* Replan (frame {len(self.rrt_gif_frames) + 1})')
+        ax.legend(loc='upper right', fontsize=8)
+        ax.set_aspect('equal')
+        ax.grid(True, alpha=0.3)
+        ax.set_xlim(-12, 12)
+        ax.set_ylim(-14, 14)
+
+        # Render figure to PIL Image in memory
+        buf = io.BytesIO()
+        fig.savefig(buf, format='png', dpi=100, bbox_inches='tight')
+        plt.close(fig)
+        buf.seek(0)
+        frame = Image.open(buf).convert('RGB')
+        self.rrt_gif_frames.append(frame.copy())
+        buf.close()
+
+        self.get_logger().info(
+            f'RRT* GIF frame {len(self.rrt_gif_frames)} captured '
+            f'(edges={len(self.rrt_tree_edges)}, path_pts={len(self.rrt_path_pts)})'
+        )
+
+    def save_rrt_gif(self):
+        """Save all captured RRT* frames as an animated GIF."""
+        if len(self.rrt_gif_frames) < 2:
+            self.get_logger().info(
+                f'Not enough RRT* frames for GIF ({len(self.rrt_gif_frames)}), skipping')
+            return
+
+        save_dir = os.path.dirname(self.save_path)
+        gif_path = os.path.join(save_dir, 'rrt_planning.gif')
+
+        self.rrt_gif_frames[0].save(
+            gif_path,
+            save_all=True,
+            append_images=self.rrt_gif_frames[1:],
+            duration=500,  # 500ms per frame
+            loop=0,
+        )
+        self.get_logger().info(
+            f'RRT* GIF saved: {gif_path} ({len(self.rrt_gif_frames)} frames)'
+        )
 
     def _odom_to_world(self, odom_msg, spawn_x, spawn_y, spawn_yaw):
         ox = odom_msg.pose.pose.position.x
@@ -224,6 +325,7 @@ def main(args=None):
         rclpy.spin(node)
     except KeyboardInterrupt:
         node.save_plot()
+        node.save_rrt_gif()
     node.destroy_node()
     rclpy.shutdown()
 
